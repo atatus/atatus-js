@@ -19,6 +19,7 @@
     "tracking"
   ],
   "license": "MIT",
+  "ignore": {},
   "dependencies": {
   },
   "devDependencies": {

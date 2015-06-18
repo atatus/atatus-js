@@ -2,6 +2,7 @@
     "name": "atatus-js",
     "version": "2.2.2",
     "description": "Atatus Real User Monitoring and Advanced error tracking plugin for web",
+    "url": "https://www.atatus.com",
     "homepage": "https://www.atatus.com",
     "author": {
         "name": "Atatus",
@@ -20,7 +21,6 @@
         "tracking"
     ],
     "license": "MIT",
-    "ignore": {},
     "dependencies": {},
     "devDependencies": {}
 }

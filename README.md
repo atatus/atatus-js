@@ -2,6 +2,8 @@
 
 [Atatus](https://www.atatus.com) Real User Monitoring and Advanced error tracking plugin for web.
 
+[Signup for Atatus](https://www.atatus.com/signup).
+
 ## Getting Started
 
 ### With Bower

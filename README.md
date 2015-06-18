@@ -10,13 +10,16 @@
 
 Run `bower install atatus-js`
 
+### With NPM
+
+Run `npm install atatus-js --save`
 
 ## Usage
 
 In your web page:
 
 ```html
-<script type="text/javascript" src="atatus.min.js"></script>
+<script type="text/javascript" src="/PATH_TO_ATATUS/atatus.min.js"></script>
 <script>
   atatus.config('YOUR_API_KEY').install();
 </script>

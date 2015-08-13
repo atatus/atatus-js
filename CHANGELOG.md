@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.2.4
+-----
+-  Fixed bug in jQuery.event wrapping if handler not a func
+-  Handle exceptions on windows phone 8 in cordova
+-  Normalize Firefox's 0-based column number
+
 2.2.3
 -----
 -  Add support for source map

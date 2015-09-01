@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.2.5
+-----
+-  Added `isConfigured` to check whether API key is configured or not
+
 2.2.4
 -----
 -  Fixed bug in jQuery.event wrapping if handler not a func

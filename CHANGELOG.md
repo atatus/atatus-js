@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.3.0
+-----
+-  Added support for Ajax Monitoring
+-  Added support for Transaction Monitoring
+
 2.2.5
 -----
 -  Added `isConfigured` to check whether API key is configured or not

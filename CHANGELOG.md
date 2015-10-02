@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.3.1
+-----
+-  Fixed responseText issue
+
 2.3.0
 -----
 -  Added support for Ajax Monitoring

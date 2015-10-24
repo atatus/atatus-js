@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.3.3
+-----
+-  Increased AJAX Batch Size to 25
+-  Renamed AJAX Payload key name.
+-  Ignored Page Load time greater than 70 sec
+
 2.3.2
 -----
 -  Removed query string from AJAX URL

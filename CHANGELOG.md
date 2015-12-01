@@ -1,6 +1,16 @@
 Changelog
 =========
 
+2.3.5
+-----
+-  Added a map file
+-  Fixed ignore errors issue
+
+2.3.4
+-----
+-  Fixed callback duration.
+-  Removed 70 sec check in page load performance
+
 2.3.3
 -----
 -  Increased AJAX Batch Size to 25

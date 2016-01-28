@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.3.6
+-----
+-  Added user support
+-  Removed sourcemap file
+
 2.3.5
 -----
 -  Added a map file

@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.3.7
+-----
+-  Fixed enable sourcemap type issue.
+-  Removed atatus URL from stacktrace
+
 2.3.6
 -----
 -  Added user support

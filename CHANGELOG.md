@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.3.8
+-----
+-  Fixed version number and user id integer values
+-  Added uninstall support
+
 2.3.7
 -----
 -  Fixed enable sourcemap type issue.

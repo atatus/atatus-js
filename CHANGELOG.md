@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.3.9
+-----
+-  Added an option to disable Real User Monitoring
+
 2.3.8
 -----
 -  Fixed version number and user id integer values

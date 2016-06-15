@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.3.10
+-----
+-  Added grouping key support
+-  Added support for options in config object.
+-  Added option to report console errors
+
 2.3.9
 -----
 -  Added an option to disable Real User Monitoring

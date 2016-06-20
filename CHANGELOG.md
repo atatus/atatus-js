@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.3.11
+-----
+-  Added request object for on before send
+
 2.3.10
 -----
 -  Added grouping key support

@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.3.12
+-----
+-  Added console timeline support
+-  Added console.error notify
+
 2.3.11
 -----
 -  Added request object for on before send

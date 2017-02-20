@@ -1,6 +1,10 @@
 Changelog
 =========
 
+3.0.1
+-----
+-  Removed UMD support.
+
 3.0.0
 -----
 -  Added support for Session Tracking

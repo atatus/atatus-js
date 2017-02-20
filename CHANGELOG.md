@@ -1,6 +1,11 @@
 Changelog
 =========
 
+3.0.0
+-----
+-  Added support for Session Tracking
+-  Added support for Single Page Application route change performances
+
 2.3.12
 -----
 -  Added console timeline support

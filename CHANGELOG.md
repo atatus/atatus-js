@@ -1,6 +1,10 @@
 Changelog
 =========
 
+3.0.3
+-----
+-  Added anonymize IP support
+
 3.0.2
 -----
 -  Added regex support for allowed domains

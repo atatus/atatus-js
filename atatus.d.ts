@@ -10,6 +10,9 @@ interface AtatusOptions {
     /** Print debug message */
     debugMode?: boolean;
 
+    /** When present, the IP address of the sender will be anonymized. */
+    anonymizeIp?: boolean;
+
     /** Control what should be monitored with Atatus */
     disableBreadcrumbs?: boolean;
     disableErrorTracking?: boolean;

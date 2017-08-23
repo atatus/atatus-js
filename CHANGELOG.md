@@ -1,6 +1,10 @@
 Changelog
 =========
 
+3.0.4
+-----
+-  Fixed failed session payloads.
+
 3.0.3
 -----
 -  Added anonymize IP support

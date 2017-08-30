@@ -1,6 +1,10 @@
 Changelog
 =========
 
+3.0.5
+-----
+-  Fixed failed session payloads. Sorry, last fix does not work in certain scenario.
+
 3.0.4
 -----
 -  Fixed failed session payloads.

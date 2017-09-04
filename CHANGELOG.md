@@ -1,6 +1,10 @@
 Changelog
 =========
 
+3.0.6
+-----
+-  For individual errors, removed appending of original custom data, and tags.
+
 3.0.5
 -----
 -  Fixed failed session payloads. Sorry, last fix does not work in certain scenario.

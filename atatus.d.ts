@@ -246,4 +246,40 @@ interface AtatusStatic {
      */
     endSession(): AtatusStatic;
 
+    /**
+     * Begin the transaction
+     *
+     * @param {String} txnName - Transaction name
+     */
+    beginTransaction(txnName: string): void;
+
+    /**
+     * End the transaction successfully
+     *
+     * @param {String} txnName - Transaction name
+     */
+    endTransaction(txnName: string): void;
+
+    /**
+     * Fail the transaction
+     *
+     * @param {String} txnName - Transaction name
+     */
+    failTransaction(txnName: string): void;
+
+    /**
+     * Cancel the transaction
+     *
+     * @param {String} txnName - Transaction name
+     */
+    cancelTransaction(txnName: string): void;
+
+    /**
+     * Record the transaction with the given duration
+     *
+     * @param {String} txnName - Transaction name
+     * @param {Number} duration - Time duration in milliseconds
+     */
+    recordTransaction(txnName: string, duration: number): void;
+
 }

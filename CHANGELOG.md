@@ -1,6 +1,11 @@
 Changelog
 =========
 
+3.0.7
+-----
+-  Limit number of errors to be stored in local storage during offline save.
+-  Introduced "recordTransaction" to directly record custom duration.
+
 3.0.6
 -----
 -  For individual errors, removed appending of original custom data, and tags.

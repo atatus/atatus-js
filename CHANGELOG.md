@@ -1,6 +1,12 @@
 Changelog
 =========
 
+3.0.8
+-----
+
+-  Added fetch as AJAX in session traces.
+-  Fixed session variable issue.
+
 3.0.7
 -----
 -  Limit number of errors to be stored in local storage during offline save.

@@ -1,10 +1,6 @@
 // Type definitions for atatus.js
 // Project: https://github.com/atatus/atatus-js
 
-declare var atatus: AtatusStatic;
-
-export = atatus;
-
 interface AtatusOptions {
 
     /** Print debug message */
@@ -69,7 +65,7 @@ interface AtatusOptions {
 }
 
 
-interface AtatusStatic {
+interface Atatus {
 
     /** Atatus.js version. */
     VERSION: string;
@@ -86,102 +82,102 @@ interface AtatusStatic {
      * Allow multiple versions of Atatus to be installed.
      * Strip Atatus from the global context and returns the instance.
      *
-     * @return {Atatus}
+     * @return {!Atatus} A self reference.
      */
-    noConflict(): AtatusStatic;
+    noConflict(): Atatus;
 
     /*
      * Configure Atatus with a API Key and extra options
      *
-     * @param {string} apiKey The public Atatus project API Key
-     * @param {object} options Optional set of of global options [optional]
-     * @return {Atatus}
+     * @param {string}  apiKey The public Atatus project API Key
+     * @param {object}  options Optional set of of global options [optional]
+     * @return {!Atatus} A self reference.
      */
-    config(apiKey: string, options?: AtatusOptions): AtatusStatic;
+    config(apiKey: string, options?: AtatusOptions): Atatus;
 
     /*
      * Installs all necessary configurations to capture errors and
      * performance metrics.
      *
-     * @return {Atatus}
+     * @return {!Atatus} A self reference.
      */
-    install(): AtatusStatic;
+    install(): Atatus;
 
     /*
      * Uninstalls the Atatus
      *
-     * @return {Atatus}
+     * @return {!Atatus} A self reference.
      */
-    uninstall(): AtatusStatic;
+    uninstall(): Atatus;
 
     /*
      * Manually capture an exception and send it over to Atatus
      *
-     * @param {error} ex An exception to be logged
-     * @param {object} customData Custom meta data for this error [optional]
-     * @param {array} tags List of tags for this error [optional]
-     * @return {Atatus}
+     * @param {error}  ex An exception to be logged
+     * @param {object}  customData Custom meta data for this error [optional]
+     * @param {array}  tags List of tags for this error [optional]
+     * @return {!Atatus} A self reference.
      */
-    notify(ex: Error, customData?: Object, tags?: string[]): AtatusStatic;
+    notify(ex: Error, customData?: Object, tags?: string[]): Atatus;
 
     /*
      * Set a user to be sent along with the payload.
      *
-     * @param {object} user An object representing user data [optional]
-     * @return {Atatus}
+     * @param {object}  user An object representing user data [optional]
+     * @return {!Atatus} A self reference.
      */
     setUser(user: {
         id?: string;
         email?: string;
         name?: string;
-    }): AtatusStatic;
+    }): Atatus;
 
     /**
      * Clear the user context, removing the user data that would be sent to Atatus.
      *
-     * @return {Atatus}
+     * @return {!Atatus} A self reference.
      */
-    resetUser(): AtatusStatic;
+    resetUser(): Atatus;
 
     /**
      * Enable offline
 
-     * @param {boolean} offline
-     * @return {Atatus}
+     * @param {boolean} offline Value indicates whether to enable offline data collection or not.
+     * @return {!Atatus} A self reference.
      */
-    enableOffline(offline: boolean): AtatusStatic;
+    enableOffline(offline: boolean): Atatus;
 
     /**
      * Set release version of application
      *
-     * @param {string} version
-     * @return {Atatus}
+     * @param {string}  version Application version number
+     * @return {!Atatus} A self reference.
      */
-    setVersion(version: string): AtatusStatic;
+    setVersion(version: string): Atatus;
 
     /**
      * Set meta data which helps you to debug the error
      *
-     * @param {Object} customData
-     * @return {Atatus}
+     * @param {Object}  customData Object contains custom details to be send with error.
+     * @return {!Atatus} A self reference.
      */
-    setCustomData(customData: Object): AtatusStatic;
+    setCustomData(customData: Object): Atatus;
 
     /**
      * Set tags by which you can filter the error and performance data
      *
-     * @param {string[]} tags
-     * @return {Atatus}
+     * @param {string[]}  tags List of tags
+     * @return {!Atatus} A self reference.
      */
-    setTags(tags: string[]): AtatusStatic;
+    setTags(tags: string[]): Atatus;
 
     /**
      * Set allowed domains
      *
-     * @param  {(RegExp | string)[]}          allowedDomains List of allowed domains.
-     * @return {Atatus}
+     * @param  {(RegExp | string)[]}  allowedDomains List of allowed domains.
+     * @return {!Atatus} A self reference.
      */
-    setAllowedDomains(allowedDomains: (RegExp | string)[]): AtatusStatic;
+    setAllowedDomains(allowedDomains: (RegExp | string)[]): Atatus;
 
     /**
      * Get list of allowed domains
@@ -193,10 +189,10 @@ interface AtatusStatic {
     /**
      * Set the endpoint where data should be sent
      *
-     * @param  {string}          apiEndpoint The endpoint where all data has to be sent.
-     * @return {Atatus}
+     * @param  {string}  apiEndpoint The endpoint where all data has to be sent.
+     * @return {!Atatus} A self reference.
      */
-    setAPIEndpoint(apiEndpoint: string): AtatusStatic;
+    setAPIEndpoint(apiEndpoint: string): Atatus;
 
     /**
      * Get the API Endpoint
@@ -209,77 +205,87 @@ interface AtatusStatic {
 
     /** Log a breadcrumb
      *
-     * @param  {any}          value Value of the breadcrumb.
-     * @param  {string}       type Type of the breadcrumb can be info, error, warn.
-     * @return {Atatus}
+     * @param  {any}  value Value of the breadcrumb.
+     * @param  {string}  type Type of the breadcrumb can be info, error, warn.
+     * @return {!Atatus} A self reference.
     */
-    leaveBreadcrumb(value: any, type: string): AtatusStatic;
+    leaveBreadcrumb(value: any, type: string): Atatus;
 
     /**
      * Specify a function that allows mutation of the data payload right before being sent to Atatus.
      *
-     * @param  {any}          data Payload of the error or performance.
-     * @return {Atatus}
+     * @param  {any}  data Payload of the error or performance.
+     * @return {!Atatus} A self reference.
      */
-    onBeforeSend(data: any): AtatusStatic;
+    onBeforeSend(data: any): Atatus;
 
     /**
      * Specify a callback function that allows you to apply your own filters to determine if the message should be sent to Atatus.
      *
-     * @param  {any}          data Payload of the error.
-     * @return {Atatus}
+     * @param  {any}  data Payload of the error.
+     * @return {!Atatus} A self reference.
      */
-    onBeforeErrorSend(data: any): AtatusStatic;
+    onBeforeErrorSend(data: any): Atatus;
 
     /**
      * Specify a callback function that allows to specify the custom grouping key of the error
      *
-     * @param  {any}          data Payload of the error.
-     * @return {Atatus}
+     * @param  {any}  data Payload of the error.
+     * @return {!Atatus} A self reference.
      */
-    setGroupingKeyCallback(data: any): AtatusStatic;
+    setGroupingKeyCallback(data: any): Atatus;
 
     /**
      * End the session
      *
-     * @return {Atatus}
+     * @return {!Atatus} A self reference.
      */
-    endSession(): AtatusStatic;
+    endSession(): Atatus;
 
     /**
      * Begin the transaction
      *
-     * @param {String} txnName - Transaction name
+     * @param {String}  txnName - Transaction name
      */
     beginTransaction(txnName: string): void;
 
     /**
      * End the transaction successfully
      *
-     * @param {String} txnName - Transaction name
+     * @param {String}  txnName - Transaction name
      */
     endTransaction(txnName: string): void;
 
     /**
      * Fail the transaction
      *
-     * @param {String} txnName - Transaction name
+     * @param {String}  txnName - Transaction name
      */
     failTransaction(txnName: string): void;
 
     /**
      * Cancel the transaction
      *
-     * @param {String} txnName - Transaction name
+     * @param {String}  txnName - Transaction name
      */
     cancelTransaction(txnName: string): void;
 
     /**
      * Record the transaction with the given duration
      *
-     * @param {String} txnName - Transaction name
-     * @param {Number} duration - Time duration in milliseconds
+     * @param {String}  txnName - Transaction name
+     * @param {Number}  duration - Time duration in milliseconds
      */
     recordTransaction(txnName: string, duration: number): void;
 
+}
+
+
+interface Window {
+    _atatusConfig: AtatusOptions
+}
+
+declare var atatus: Atatus;
+declare module "atatus" {
+  export = atatus;
 }

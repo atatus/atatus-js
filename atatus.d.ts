@@ -288,6 +288,6 @@ interface Window {
 }
 
 declare var atatus: Atatus;
-declare module "atatus" {
+declare module "atatus-js" {
   export = atatus;
 }

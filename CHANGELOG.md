@@ -1,6 +1,11 @@
 Changelog
 =========
 
+3.1.1
+-----
+
+-  Fixed naming issue in typescript file.
+
 3.1.0
 -----
 

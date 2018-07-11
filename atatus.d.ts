@@ -78,7 +78,7 @@ interface Atatus {
      */
     isConfigured(): boolean;
 
-    /*
+    /**
      * Allow multiple versions of Atatus to be installed.
      * Strip Atatus from the global context and returns the instance.
      *
@@ -86,7 +86,7 @@ interface Atatus {
      */
     noConflict(): Atatus;
 
-    /*
+    /**
      * Configure Atatus with a API Key and extra options
      *
      * @param {string}  apiKey The public Atatus project API Key
@@ -95,7 +95,7 @@ interface Atatus {
      */
     config(apiKey: string, options?: AtatusOptions): Atatus;
 
-    /*
+    /**
      * Installs all necessary configurations to capture errors and
      * performance metrics.
      *
@@ -103,14 +103,14 @@ interface Atatus {
      */
     install(): Atatus;
 
-    /*
-     * Uninstalls the Atatus
+    /**
+     * Un-install Atatus Agent
      *
      * @return {!Atatus} A self reference.
      */
     uninstall(): Atatus;
 
-    /*
+    /**
      * Manually capture an exception and send it over to Atatus
      *
      * @param {error}  ex An exception to be logged
@@ -120,7 +120,7 @@ interface Atatus {
      */
     notify(ex: Error, customData?: Object, tags?: string[]): Atatus;
 
-    /*
+    /**
      * Set a user to be sent along with the payload.
      *
      * @param {object}  user An object representing user data [optional]
@@ -201,9 +201,9 @@ interface Atatus {
      */
     getAPIEndpoint(): string;
 
-    /** Log a breadcrumb*/
 
-    /** Log a breadcrumb
+    /**
+     * Log a breadcrumb
      *
      * @param  {any}  value Value of the breadcrumb.
      * @param  {string}  type Type of the breadcrumb can be info, error, warn.
@@ -279,7 +279,6 @@ interface Atatus {
     recordTransaction(txnName: string, duration: number): void;
 
 }
-
 
 interface Window {
     _atatusConfig: AtatusOptions

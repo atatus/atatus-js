@@ -1,6 +1,12 @@
 Changelog
 =========
 
+3.1.0
+-----
+
+-  Added CommonJS, Browserify and AMD support.
+-  Reported unhandled promise rejection as error.
+
 3.0.9
 -----
 

@@ -38,3 +38,13 @@ Atatus is also available from our content delivery network:
   atatus.config('YOUR_API_KEY').install();
 </script>
 ```
+
+### Module loaders (CommonJS)
+
+Atatus can be loaded using a module loader like Browserify or Webpack.
+
+```javascript
+var atatus = require('atatus-js');
+atatus.config('YOUR_API_KEY').install();
+```
+

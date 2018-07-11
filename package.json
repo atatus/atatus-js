@@ -1,6 +1,6 @@
 {
     "name": "atatus-js",
-    "version": "3.0.9",
+    "version": "3.1.0",
     "description": "Atatus Real User Monitoring and Advanced error tracking plugin for web",
     "url": "https://www.atatus.com",
     "homepage": "https://www.atatus.com",
@@ -13,6 +13,7 @@
         "url": "git@github.com:atatus/atatus-js.git"
     },
     "main": "atatus.min.js",
+    "types": "./atatus.d.ts",
     "keywords": [
         "atatus",
         "rum",
@@ -24,3 +25,4 @@
     "dependencies": {},
     "devDependencies": {}
 }
+

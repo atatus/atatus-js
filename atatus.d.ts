@@ -20,6 +20,9 @@ interface AtatusOptions {
     /** Report AJAX 4xx and 5xx status codes as error to Atatus */
     reportAjaxErrors?: boolean;
 
+    /** Report Unhandled promise rejections as error to Atatus */
+    reportUnhandledRejections?: boolean;
+
     /** Additional data to be sent onto the error. */
     customData?: Object;
 

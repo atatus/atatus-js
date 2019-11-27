@@ -1,6 +1,36 @@
 Changelog
 =========
 
+4.0.4
+-----
+
+-  Fixed issue in type script set user definition.
+
+4.0.3
+-----
+
+-  Added support for ignoreUrls and whitelistUrls
+
+4.0.2
+-----
+
+-  Fixed slowest routes duration issue.
+-  Fixed slowest route queue limit.
+
+4.0.1
+-----
+
+-  Fixed typescript name issue.
+
+4.0.0
+-----
+
+-  Added support for single page applications (SPA).
+-  Allow AJAX duration up to 150 seconds
+-  Ignore analytics domains in AJAX monitoring.
+-  Updated recordTransactions with failure option.
+-  Fixed negative number in scs timing.
+
 3.1.1
 -----
 

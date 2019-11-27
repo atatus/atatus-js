@@ -20,7 +20,7 @@ interface AtatusOptions {
     /** Report AJAX 4xx and 5xx status codes as error to Atatus */
     reportAjaxErrors?: boolean;
 
-    /** Report Unhandled promise rejections as error to Atatus */
+    /** Report unhandled promise rejections as error to Atatus */
     reportUnhandledRejections?: boolean;
 
     /** Additional data to be sent onto the error. */
@@ -35,17 +35,17 @@ interface AtatusOptions {
     /** The release version of the application you are monitoring with Atatus */
     version?: string;
 
-    /** List of messages to be fitlered out before being sent to Atatus. */
+    /** List of error messages to be filtered out before being sent to Atatus. */
     ignoreErrors?: (RegExp | string)[];
 
-    /** Only report errors and performances from whole domains matching a regex pattern. */
+    /** DEPRECATED: Only report performances metrics from whole domains matching a regex pattern. */
     allowedDomains?: (RegExp | string)[];
 
-    /** Similar to ignoreErrors, but will ignore errors from whole urls patching a regex pattern. */
-    // ignoreUrls?: (RegExp | string)[];
+    /** It will ignore performance metrics from whole urls matching a regex pattern or string. */
+    ignoreUrls?: (RegExp | string)[];
 
-    /** The inverse of ignoreUrls. Only report errors from whole urls matching a regex pattern. */
-    // whitelistUrls?: (RegExp | string)[];
+    /** The inverse of ignoreUrls. Only report performance metrics from whole urls matching a regex pattern or string. */
+    whitelistUrls?: (RegExp | string)[];
 
     // Enable or Disable all console activity
     console? : boolean;
@@ -65,6 +65,8 @@ interface AtatusOptions {
 
     /** By default, Atatus does not truncate messages. If you need to truncate characters for whatever reason, you may set this to limit the length. */
     // maxMessageLength?: number;
+
+    urlMaxLength?: number;
 }
 
 
@@ -129,11 +131,7 @@ interface Atatus {
      * @param {object}  user An object representing user data [optional]
      * @return {!Atatus} A self reference.
      */
-    setUser(user: {
-        id?: string;
-        email?: string;
-        name?: string;
-    }): Atatus;
+    setUser(id: string, email?: string, name?: string): Atatus;
 
     /**
      * Clear the user context, removing the user data that would be sent to Atatus.
@@ -212,7 +210,7 @@ interface Atatus {
      * @param  {string}  type Type of the breadcrumb can be info, error, warn.
      * @return {!Atatus} A self reference.
     */
-    leaveBreadcrumb(value: any, type: string): Atatus;
+    leaveBreadcrumb(value: any, type?: string): Atatus;
 
     /**
      * Specify a function that allows mutation of the data payload right before being sent to Atatus.
@@ -279,7 +277,7 @@ interface Atatus {
      * @param {String}  txnName - Transaction name
      * @param {Number}  duration - Time duration in milliseconds
      */
-    recordTransaction(txnName: string, duration: number): void;
+    recordTransaction(txnName: string, duration: number, success?: boolean): void;
 
 }
 

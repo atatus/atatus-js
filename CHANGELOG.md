@@ -1,6 +1,13 @@
 Changelog
 =========
 
+4.1.0
+-----
+
+-  Sent session data in XHR instead of query parameter.
+-  Added SameSite=None in cookie.
+
+
 4.0.4
 -----
 

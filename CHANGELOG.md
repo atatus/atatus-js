@@ -1,6 +1,12 @@
 Changelog
 =========
 
+4.1.1
+-----
+
+-  Fixed sending page load two times.
+
+
 4.1.0
 -----
 

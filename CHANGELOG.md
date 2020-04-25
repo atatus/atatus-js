@@ -1,6 +1,17 @@
 Changelog
 =========
 
+4.2.0
+-----
+
+-  Limit number of payloads sent to Atatus server.
+-  Added limit to breadcrumb messages.
+-  Added separate version to SPA.
+-  Added support for network information.
+-  Added support for detailed timing metrics.
+-  Added support for hash route options.
+
+
 4.1.1
 -----
 

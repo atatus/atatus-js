@@ -9,6 +9,9 @@ interface AtatusOptions {
     /** When present, the IP address of the sender will be anonymized. */
     anonymizeIp?: boolean;
 
+    /** When present, change hash routes into clean path. */
+    hashRoutes?: boolean;
+
     /** Control what should be monitored with Atatus */
     disableBreadcrumbs?: boolean;
     disableErrorTracking?: boolean;
@@ -141,8 +144,16 @@ interface Atatus {
     resetUser(): Atatus;
 
     /**
-     * Enable offline
+     * Enable hash routes or path
+     *
+     * @param {boolean} hashRoutes Value indicates whether to convert hash routes into clean URL.
+     * @return {!Atatus} A self reference.
+     */
+    setHashRoutes(hashRoutes: boolean): Atatus;
 
+    /**
+     * Enable offline
+     *
      * @param {boolean} offline Value indicates whether to enable offline data collection or not.
      * @return {!Atatus} A self reference.
      */
@@ -171,6 +182,36 @@ interface Atatus {
      * @return {!Atatus} A self reference.
      */
     setTags(tags: string[]): Atatus;
+
+     /**
+     * Set ignored urls
+     *
+     * @param  {(RegExp | string)[]}  ignoreUrls List of ignored urls.
+     * @return {!Atatus} A self reference.
+     */
+    setIgnoreUrls(ignoreUrls: (RegExp | string)[]): Atatus;
+
+    /**
+     * Get list of ignored urls
+     *
+     * @return {(RegExp | string)[]}
+     */
+    getIgnoreUrls(): (RegExp | string)[];
+
+    /**
+     * Set white-list urls
+     *
+     * @param  {(RegExp | string)[]}  whitelistUrls List of whitelist urls.
+     * @return {!Atatus} A self reference.
+     */
+    setWhitelistUrls(whitelistUrls: (RegExp | string)[]): Atatus;
+
+    /**
+     * Get list of white-list urls
+     *
+     * @return {(RegExp | string)[]}
+     */
+    getWhitelistUrls(): (RegExp | string)[];
 
     /**
      * Set allowed domains
@@ -201,7 +242,6 @@ interface Atatus {
      * @return {string}
      */
     getAPIEndpoint(): string;
-
 
     /**
      * Log a breadcrumb

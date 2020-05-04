@@ -1,6 +1,12 @@
 Changelog
 =========
 
+4.2.1
+-----
+
+-  Updated typescript definition file for setHashRoutes, setWhitelistUrls and setIgnoreUrls.
+
+
 4.2.0
 -----
 

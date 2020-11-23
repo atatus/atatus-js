@@ -1,6 +1,12 @@
 Changelog
 =========
 
+4.3.1
+-----
+
+-  Fixed web vitals support for not supporting browser.
+
+
 4.3.0
 -----
 

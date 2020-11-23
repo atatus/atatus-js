@@ -1,6 +1,12 @@
 Changelog
 =========
 
+4.3.0
+-----
+
+-  Added web vitals support.
+
+
 4.2.1
 -----
 

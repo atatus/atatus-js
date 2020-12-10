@@ -1,6 +1,13 @@
 Changelog
 =========
 
+4.3.2
+-----
+
+-  Fixed web vitals issue in ES6 and Require.js modules.
+-  Updated collector endpoint.
+
+
 4.3.1
 -----
 

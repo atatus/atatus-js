@@ -1,6 +1,13 @@
 Changelog
 =========
 
+4.4.0
+-----
+
+-  Fixed web vitals sending issue during page unload.
+-  Fixed higher XHR timing issue.
+
+
 4.3.2
 -----
 

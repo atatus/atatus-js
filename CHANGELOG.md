@@ -1,6 +1,12 @@
 Changelog
 =========
 
+4.4.1
+-----
+
+-  Fixed ignored urls.
+
+
 4.4.0
 -----
 

@@ -1,6 +1,13 @@
 Changelog
 =========
 
+4.5.0
+-----
+
+-  Fixed fetch failure exceptions.
+-  Fixed XHR payload sending.
+
+
 4.4.1
 -----
 

@@ -1,6 +1,12 @@
 Changelog
 =========
 
+4.6.0
+-----
+
+-  Add timestamp support in XHR calls.
+
+
 4.5.0
 -----
 

@@ -1,6 +1,12 @@
 Changelog
 =========
 
+4.6.1
+-----
+
+-  Add support for INP web vital.
+
+
 4.6.0
 -----
 

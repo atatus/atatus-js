@@ -1,6 +1,12 @@
 Changelog
 =========
 
+4.6.2
+-----
+
+-  Add support for `onTransformRouteUrl` callback.
+
+
 4.6.1
 -----
 

@@ -5,6 +5,7 @@ Changelog
 -----
 
 -  Add support for `onTransformRouteUrl` callback.
+-  Fix status code in Ajax abort failures.
 
 
 4.6.1

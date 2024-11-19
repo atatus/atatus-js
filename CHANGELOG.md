@@ -1,6 +1,12 @@
 Changelog
 =========
 
+4.6.4
+-----
+
+-  Add support for max duplicate errors option.
+
+
 4.6.3
 -----
 

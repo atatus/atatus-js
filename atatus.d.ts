@@ -70,6 +70,7 @@ interface AtatusOptions {
     // maxMessageLength?: number;
 
     urlMaxLength?: number;
+    maxDuplicateErrors?: number;
 }
 
 

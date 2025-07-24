@@ -1,6 +1,13 @@
 Changelog
 =========
 
+4.6.5
+-----
+
+-  Fix refreshing issue in Next.js
+-  Send XHR data in POST call.
+
+
 4.6.4
 -----
 

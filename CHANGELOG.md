@@ -1,6 +1,12 @@
 Changelog
 =========
 
+4.7.0
+-----
+
+-  Update XHR patch implementation.
+
+
 4.6.5
 -----
 
